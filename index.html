@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header id = "header">
+        <div class="inner-header">
+          <a href="https://sfedu.ru/"><img src="./img/logosfedurus.svg" alt="" class="logo" /></a>
+          <nav>
+            <a href="#">О мероприятии</a>
+            <a href="#">Место</a>
+            <a href="#">Контакты</a>
+          </nav>
+          <a class="reg-btn"href="#">Регистрация</a>
+        </div>
+      </header>
+      
+      <script>
+        let header = document.getElementById('header');
+        let headerBG = window.getComputedStyle(header).getPropertyValue('background-color');
+        function setHeaderOpacity() {
+          if (!header.classList.contains('darken')) {
+            header.classList.add('darken');
+          }
+        }
+        function unsetHeaderOpacity() {
+          if (header.classList.contains('darken')) {
+            header.classList.remove('darken');
+          }
+        }
+
+        document.addEventListener('scroll', function(e) {
+          if (window.pageYOffset == 0) {
+            unsetHeaderOpacity();
+          }
+          else {
+            setHeaderOpacity();
+          }
+        });
+      </script>
+
+      <main>
+        <section class="intro">
+          <div class="main-text">
+            <h2>24 апреля в 12:00</h2>
+            <h1><span class="exp">exp</span>(sfedu)</h1>
+            <p>Новая степень развития твоего проекта</p>
+          </div>
+        </section>
+
+        <section class="about-exp">
+          <h2>Что такое Sfedu Exponent?</h2>
+          <p>
+            Sfedu Exponent - это мероприятие на котором каждый может представить
+            свой проект, получить обратную связь или найти инвестора.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

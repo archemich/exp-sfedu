@@ -1,0 +1,117 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 24px;
+}
+
+body {
+  color: white;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+/*Header*/
+
+header {
+  position: fixed;
+  z-index: 1000;
+  margin:auto;
+  max-height: 70px;
+  width: 100vw;
+  vertical-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 1s ease-out;
+}
+
+header.darken {
+  background-color: rgba(0,0,0,.7) !important;
+}
+
+.inner-header {
+  display: flex;
+  flex-direction: row;
+  font-size: .7rem;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  filter: brightness(0) invert(1);
+  max-height: 70px;
+}
+
+.logo:hover {
+  filter: brightness(100%) contrast(500%) invert(0);
+
+}
+
+nav {
+  margin-left: auto;
+  margin-right: 55px;
+}
+nav a {
+  padding-right: .7em;
+}
+
+nav a:hover{
+  color: #e6e6e6;
+  text-decoration: underline;
+}
+
+.reg-btn {
+  background-color: #00bd00;
+  padding: .3em;
+}
+
+.reg-btn:hover {
+  text-decoration: underline;
+}
+
+
+/*Main Section*/
+
+.intro {
+  background: linear-gradient(rgba(0,0,0,.7), rgba(0, 0, 0, .6)), url(../img/winter-garden.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+
+.main-text {
+  padding-left: 25px;
+  padding-top: 20vh;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.main-text h2 {
+  font-size: 46px;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+.main-text h1 {
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.exp{
+  color: rgb(56, 56, 255);
+  font-weight: 900;
+  text-shadow: black 1px 1px 2px, black -1px -1px 2px;
+}
+
+.main-text p {
+  opacity: .8;
+}
