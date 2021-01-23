@@ -4,44 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
     <div class="wrapper">
-      <header id = "header">
+      <header class="header">
         <div class="inner-header">
-          <a href="https://sfedu.ru/"><img src="./img/logosfedurus.svg" alt="" class="logo" /></a>
+          <a href="https://sfedu.ru/"
+            ><img src="./img/logosfedurus.svg" alt="" class="logo"
+          /></a>
           <nav>
-            <a href="#">О мероприятии</a>
-            <a href="#">Место</a>
-            <a href="#">Контакты</a>
+            <a href="#about-exp">О мероприятии</a>
+            <a href="#contact">Контакты</a>
           </nav>
-          <a class="reg-btn"href="#">Регистрация</a>
+          <a class="reg-btn" href="#">Регистрация</a>
         </div>
       </header>
-      
+
       <script>
-        let header = document.getElementById('header');
-        let headerBG = window.getComputedStyle(header).getPropertyValue('background-color');
+        let header = document.getElementsByClassName("header")[0];
+        let headerBG = window
+          .getComputedStyle(header)
+          .getPropertyValue("background-color");
         function setHeaderOpacity() {
-          if (!header.classList.contains('darken')) {
-            header.classList.add('darken');
+          if (!header.classList.contains("darken")) {
+            header.classList.add("darken");
           }
         }
         function unsetHeaderOpacity() {
-          if (header.classList.contains('darken')) {
-            header.classList.remove('darken');
+          if (header.classList.contains("darken")) {
+            header.classList.remove("darken");
           }
         }
 
-        document.addEventListener('scroll', function(e) {
+        document.addEventListener("scroll", function (e) {
           if (window.pageYOffset == 0) {
             unsetHeaderOpacity();
-          }
-          else {
+          } else {
             setHeaderOpacity();
           }
         });
@@ -56,14 +61,45 @@
           </div>
         </section>
 
-        <section class="about-exp">
-          <h2>Что такое Sfedu Exponent?</h2>
-          <p>
-            Sfedu Exponent - это мероприятие на котором каждый может представить
-            свой проект, получить обратную связь или найти инвестора.
-          </p>
+        <section class="about-exp" id="about-exp">
+          <div class="container">
+            <div class="text">
+              <h2>Что такое Sfedu Exponent?</h2>
+              <p>
+                Sfedu Exponent - это мероприятие на котором каждый может
+                представить свой проект, получить обратную связь или найти
+                инвестора.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact" id="contact">
+          <div class="contact-container">
+              <div class="text" id="contact-text">
+                <h2>Южный федеральный университет</h2>
+                <h3>Инженерно-технологическая академия</h3>
+                <p>г. Таганрог, пер. Некрасовский, 44</p>
+                </div>
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5421.409129961864!2d38.93214880429675!3d47.202794774205145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3fd22a9e7dfbb%3A0x50dca41b02af7de7!2z0JjQvdGB0YLQuNGC0YPRgiDRgNCw0LTQuNC-0YLQtdGF0L3QuNGH0LXRgdC60LjRhSDRgdC40YHRgtC10Lwg0Lgg0YPQv9GA0LDQstC70LXQvdC40Y8g0K7QpNCjICjQmNCg0KLQodCjINCu0KTQoyk!5e0!3m2!1sru!2sru!4v1611407711950!5m2!1sru!2sru"
+                width="100%"
+                height="100%"
+                frameborder="0"
+                style="border: 0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
+          </div>
         </section>
       </main>
+
+      <footer class="footer">
+        <p>&copy Sfedu Exponent - 2021 г.</p>
+      </footer>
     </div>
   </body>
 </html>
