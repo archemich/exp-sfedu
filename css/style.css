@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "ArianAMUBold";
+  src: url("../fonts/ArianAMUBold/ArianAMUBold.eot");
+  src: url("../fonts/ArianAMUBold/ArianAMUBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/ArianAMUBold/ArianAMUBold.woff") format("woff"),
+  url("../fonts/ArianAMUBold/ArianAMUBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 18px;
@@ -15,9 +25,21 @@ a {
   color: black;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+a[href^="tel:"] {
+	color: #000;
+	font-size: 16px;
+	font-weight: 900;
+}
+
 h2 {
   font-size: 32px;
 }
+
+
 
 /*Header*/
 
@@ -30,6 +52,7 @@ h2 {
   vertical-align: center;
   background-color: rgba(0, 0, 0, 0);
   transition: background-color 1s ease-out;
+  
 }
 
 .header.darken {
@@ -39,11 +62,12 @@ h2 {
 .inner-header {
   display: flex;
   flex-direction: row;
-  font-size: 1rem;
+  font-size: 20px;
+  font-weight: 400;
   justify-content: space-around;
   align-items: center;
   width: 90%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -51,12 +75,12 @@ h2 {
   color: white;
 }
 
-.logo {
+.header-logo {
   filter: brightness(0) invert(1);
   max-height: 70px;
 }
 
-.logo:hover {
+.header-logo:hover {
   filter: brightness(100%) contrast(500%) invert(0);
 }
 
@@ -65,7 +89,7 @@ nav {
   margin-right: 55px;
 }
 nav a {
-  padding-right: 0.7em;
+  padding-right: 40px;
 }
 
 nav a:hover {
@@ -74,8 +98,9 @@ nav a:hover {
 }
 
 .reg-btn {
-  background-color: #00bd00;
-  padding: 0.3em;
+  background-color: #008A05;
+  color: white;
+  padding: 15px;
 }
 
 .reg-btn:hover {
@@ -97,7 +122,7 @@ nav a:hover {
   padding-left: 30px;
   padding-top: 20vh;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 .main-text h2 {
@@ -107,15 +132,17 @@ nav a:hover {
 }
 
 .main-text h1 {
-  font-family: "Playfair Display", serif;
   font-size: 64px;
-  font-weight: 400;
   margin-bottom: 1rem;
+}
+
+.sfedu {
+  font-family: 'Arial Narrow';
 }
 
 .exp {
   color: rgb(56, 56, 255);
-  font-weight: 700;
+  font-family: "ArianAMUBold";
   text-shadow: black 1px 1px 2px, black -1px -1px 2px;
 }
 
@@ -123,11 +150,13 @@ nav a:hover {
   opacity: 0.8;
 }
 
+/*About exp Section*/
+
 .about-exp {
   background-color: #e0e3eb;
 }
 
-.container {
+.text-container {
   margin: 0 auto;
   max-width: 760px;
   padding-left: 30px;
@@ -147,12 +176,34 @@ nav a:hover {
   padding-bottom: 30px;
 }
 
-.contact-container {
+
+.container {
+  margin: 30px auto;
+}
+.center {
+  text-align: center;
+
+}
+.reg-btn2 {
+  margin: 0 auto;
+  padding: 5px 140px;
+  text-align: center;
+
+  color:white;
+  background-color: black;
+  font-size: 38px;
+  font-weight: 700;
+  width: 100%;
+}
+
+/*Place Section*/
+
+.info-container {
 margin: 0 auto;
 }
 
 
-#contact-text {
+#place-text {
   text-align: left;
   padding-left: 40px;
 }
@@ -160,6 +211,33 @@ margin: 0 auto;
 .map {
   margin:0 auto;
   height: 75vh;
+}
+
+/*Partners Section*/
+
+
+.logos {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.logos .row {
+  display: flex;
+  justify-content: center;
+  margin:20px 0;
+}
+
+.logo {
+  height: 120px;
+}
+
+a .logo:hover {
+  filter: brightness(80%);
+}
+.logos .item {
+  margin-left: 30px;
+  margin-right: 30px;
+
 }
 
 /*footer*/
