@@ -10,7 +10,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 body {
@@ -23,11 +23,14 @@ body {
 a {
   text-decoration: none;
   color: black;
+  transition: text-decoration 0.5s ease;
+
 }
 
 a:hover {
   text-decoration: underline;
 }
+
 
 a[href^="tel:"] {
 	color: #000;
@@ -36,11 +39,11 @@ a[href^="tel:"] {
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 48px;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 34px;
 }
 
 .whatsapp {
@@ -69,7 +72,7 @@ h3 {
 .inner-header {
   display: flex;
   flex-direction: row;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
   justify-content: space-around;
   align-items: center;
@@ -104,7 +107,7 @@ nav a:hover {
 .reg-btn {
   background-color: #008A05;
   color: white;
-  padding: 15px;
+  padding: 15px 30px;
 }
 
 .reg-btn:hover {
