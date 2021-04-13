@@ -271,6 +271,7 @@ margin: 0 auto;
 
 .logo {
   padding-bottom: 15px;
+  min-height: 50px;
   max-height: 100px;
   max-width: 400px;
 }
