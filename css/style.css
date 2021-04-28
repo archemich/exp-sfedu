@@ -110,6 +110,12 @@ nav a:hover {
   padding: 15px 30px;
 }
 
+.results-btn {
+  background-color: #008A05;
+  color: white;
+  padding: 15px 30px;
+}
+
 .reg-btn:hover {
   text-decoration: underline;
 }
@@ -227,6 +233,18 @@ nav a:hover {
 .reg-btn2 {
   margin: 0 auto;
   padding: 5px 140px;
+  text-align: center;
+
+  color:white;
+  background-color: black;
+  font-size: 38px;
+  font-weight: 700;
+  width: 100%;
+}
+
+.results-btn2 {
+  margin: 0 auto;
+  padding: 5px 20px;
   text-align: center;
 
   color:white;
